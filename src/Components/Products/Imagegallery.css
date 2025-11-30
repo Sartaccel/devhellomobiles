@@ -1,0 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* GALLERY HEADING */
+.gallery-heading {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #000000; /* change if background is light */
+  letter-spacing: 1px;
+}
+
+/* Masonry Layout */
+.masonry {
+  column-count: 4;       /* number of columns */
+  column-gap: 16px;      /* spacing between columns */
+  padding: 16px;
+}
+
+.masonry-img {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  break-inside: avoid;   /* Important for masonry! */
+}
+
+.masonry-img:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px) {
+  .masonry { column-count: 3; }
+}
+
+@media (max-width: 800px) {
+  .masonry { column-count: 2; }
+}
+
+@media (max-width: 500px) {
+  .masonry { column-count: 1; }
+}
+
+/* FULLSCREEN VIEWER */
+.viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.viewer-img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+  animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #fff;
+  color: #000;
+  font-size: 26px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
