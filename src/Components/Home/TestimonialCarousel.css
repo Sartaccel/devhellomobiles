@@ -1,0 +1,114 @@
+/* MAIN CAROUSEL BOX */
+.tcontainer h1 {
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+#demo {
+    background-color: white;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* TEXT SECTION — PERFECT CENTER */
+.carousel-caption {
+    position: initial;
+    z-index: 10;
+    color: rgba(78, 77, 77, 0.85);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem;
+
+    max-width: 780px;   /* SAME WIDTH FOR ALL SLIDES */
+    margin: 0 auto;     /* CENTER THE BLOCK */
+    padding: 4rem 2rem; /* EVEN PADDING */
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Paragraph text centered with fixed width */
+.carousel-caption p {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* NAME UNDER TEXT */
+#image-caption {
+    font-style: normal;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: rgb(76, 106, 188);
+
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* MOBILE FIX */
+@media (max-width: 769px) {
+    .carousel-caption {
+        padding: 2.5rem 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        max-width: 95%;
+    }
+    
+    #image-caption {
+        font-size: 0.85rem;
+    }
+    .carousel-caption p {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+   #demo{
+    width: 650px;
+   }
+    
+}
+
+/* ARROWS */
+button i {
+    background-color: rgb(0, 191, 255);
+    padding: 1.2rem;
+    color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px; /* prevents arrows from shifting text */
+    opacity: 1 !important;
+    transition: none;
+}
+
+@media (max-width: 426px) {
+    button i {
+        padding: 0.8rem;
+    }
+    
+   #demo{
+    width:auto;
+   }
+   .carousel-caption p {
+    max-width: 300px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+   
+}

@@ -1,0 +1,337 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fafbfc;
+    color: #1a202c;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------------- Banner -------------------------- */
+.contact-banner-wrapper {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Background Image */
+.contact-banner-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    z-index: 1;
+}
+
+/* Text Content */
+.contact-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 1rem;
+}
+
+/* Fade + Move Up Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+.contact-top-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+/* Subtitle */
+.contact-top-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.contact-top-desc {
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .contact-banner-wrapper {
+        height: 40vh;
+    }
+
+    .contact-top-title {
+        font-size: 1.9rem;
+    }
+
+    .contact-top-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-top-desc {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 480px){
+    .contact-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 1rem;
+    margin-top: 3.2rem;
+}
+ .contact-top-title {
+        font-size: 1.2rem;
+    }
+
+    .contact-top-subtitle {
+        font-size:smaller;
+    }
+
+    .contact-top-desc {
+        font-size:xx-small;
+    }
+}
+/* ---------------------------------------------- MAIN CONTACT -------------------------- */
+
+.contact-container {
+    min-height: 60vh;
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* ========================= */
+/*         MAP LEFT          */
+/* ========================= */
+
+.contact-map-section {
+    flex: 1;
+    height: 700px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+.contact-map-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ========================= */
+/*         INFO RIGHT        */
+/* ========================= */
+
+.contact-info-section {
+    flex: 1;
+    background: #5393d4;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.contact-info-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #488ed5, #082e54);
+    opacity: 0.95;
+}
+
+.contact-info-content {
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.contact-company-logo img {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+/* Info Title */
+.contact-info-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* Info Subtitle */
+.contact-info-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Contact Items */
+.contact-info-item {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+    font-size: 1.05rem;
+}
+
+/* Social Icons */
+.contact-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-social-link {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.contact-social-link:hover {
+    background: #369ad7;
+}
+
+/* Floating Shapes */
+.contact-floating-shape {
+    position: absolute;
+    background: #deff05;
+    opacity: 0.15;
+    border-radius: 50%;
+}
+
+.contact-shape-1 {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    right: 10%;
+}
+
+.contact-shape-2 {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    left: 15%;
+}
+
+.contact-shape-3 {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    right: 20%;
+}
+
+/* ------------------------------------------------------------ */
+/* RESPONSIVE BELOW 768px */
+/* ------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    .contact-container {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .contact-map-section iframe {
+        height: 300px;
+    }
+
+    .contact-info-section {
+        padding: 2rem;
+    }
+
+    .contact-company-logo img {
+        width: 160px;
+    }
+
+    .contact-info-title {
+        font-size: 2rem;
+    }
+
+    .contact-info-description {
+        font-size: 1rem;
+    }
+
+    .contact-info-item {
+        font-size: 0.95rem;
+    }
+
+    .contact-social-link {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ------------------------------------------------------------ */
+/* RESPONSIVE BELOW 600px */
+/* ------------------------------------------------------------ */
+@media (max-width: 600px) {
+
+    .contact-company-logo img {
+        width: 140px;
+    }
+
+    .contact-info-title {
+        font-size: 1.7rem;
+    }
+
+    .contact-info-description {
+        font-size: 0.9rem;
+    }
+
+    .contact-social-link {
+        width: 42px;
+        height: 42px;
+    }
+}
+@media (max-width: 768px){
+    .contact-social-links i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
